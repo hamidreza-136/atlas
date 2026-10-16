@@ -7,7 +7,7 @@ Plain HTML/CSS/JS, no build step.
 index.html
 css/style.css
 js/main.js
-assets/figures/atlas_architecture.svg   # architecture diagram, redrawn from Sec. 3 / Appendix B
+assets/figures/atlas_architecture.png   # architecture figure (2400 px; .pdf is the vector original)
 assets/gifs/                            # ReasonVOS qualitative GIFs
 assets/images/                          # poster frames + social preview
 ```
@@ -40,11 +40,7 @@ Search the repo for these strings:
 | `PAPER_URL`, `ARXIV_URL`, `CODE_URL`, `CHECKPOINT_URL`, `SUPPLEMENTARY_URL` | hero buttons, resources section, footer |
 | `SITE_URL` comment | `og:image` / `twitter:image` need an absolute URL for social previews |
 
-## Optional: use the paper's original figures
-
-`assets/figures/atlas_architecture.svg` is a redrawn diagram. To use the original Figure 2,
-export it from the PDF (e.g. `pdftoppm -r 300 -f 3 -l 3 -png paper.pdf fig`, then crop) to
-`assets/figures/atlas_architecture.png` and change the `src` in the *ATLAS Overview* section.
+## Notes
 
 The GIFs are 9–28 MB each. GitHub accepts files up to 100 MB, but converting them to MP4
 (`<video autoplay loop muted playsinline>`) would make the page load much faster.

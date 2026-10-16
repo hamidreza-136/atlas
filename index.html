@@ -130,12 +130,10 @@
   <div class="wrap">
     <h2>ATLAS Overview</h2>
     <figure class="arch">
-      <!-- To use the original Figure 2 from the paper instead, export it to
-           assets/figures/atlas_architecture.png and change the src below. -->
-      <a href="assets/figures/atlas_architecture.svg" target="_blank" rel="noopener">
-        <img src="assets/figures/atlas_architecture.svg" alt="ATLAS architecture: a frozen LVLM produces frame-level (1024-token) and video-level (64-token) attention stacks from Ts keyframes; a U-Net with a temporal Transformer and FiLM bottleneck modulation predicts localization maps; argmax point prompts drive a frozen SAM2, duplicate seeds are removed by propagation, and the final tracklet is chosen by per-frame Pearson correlation.">
+      <a href="assets/figures/atlas_architecture.pdf" target="_blank" rel="noopener">
+        <img src="assets/figures/atlas_architecture.png" width="2400" height="1440" alt="ATLAS architecture. (1) Attention Extraction: the expression with an object-extraction prompt and keyframes 1 to 16 of the video clip go into a frozen LVLM; attention maps from heads 1 to H of layers L0 to L are stacked into tensors A1 to ATs. (2) Attention Adaptation: a U-Net with Conv + Pooling encoders, GAP, a Transformer, a linear layer producing (gamma, beta), FiLM modulation Z(1+gamma)+beta, and Upsample + Conv decoders with skip connections outputs localization maps P1 to PTs. (3) Segmentation and Propagation: a frozen SAM produces tracklets 1 to M, and Tracklet Selection gives the final segmentation.">
       </a>
-      <figcaption><b>Overview of ATLAS.</b> A frozen LVLM extracts visual attentions from sampled keyframes. A lightweight attention adaptation network turns them into object-centric localization maps. These maps guide a frozen SAM2 model, which generates and propagates candidate segmentation tracklets, and the most reliable tracklet is selected as the final segmentation. <span class="muted">(Click to enlarge.)</span></figcaption>
+      <figcaption><b>Overview of ATLAS.</b> A frozen LVLM extracts visual attentions from sampled keyframes. A lightweight attention adaptation network turns them into object-centric localization maps. These maps guide a frozen SAM2 model, which generates and propagates candidate segmentation tracklets, and the most reliable tracklet is selected as the final segmentation. <span class="muted">(Click the figure for the full-resolution PDF.)</span></figcaption>
     </figure>
 
     <div class="method-text narrow-text">
