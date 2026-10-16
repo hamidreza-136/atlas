@@ -467,45 +467,6 @@ Respond with a single word (e.g., "cat", "person", "dog") that best describes th
   </div>
 </section>
 
-<!-- ================= MORE QUALITATIVE ================= -->
-<section id="more" class="section alt">
-  <div class="wrap">
-    <h2>More Qualitative Results</h2>
-    <p class="lead center narrow-text">From the paper: sampled keyframes (top), averaged raw LVLM attention, ATLAS-adapted U-Net output, and ground-truth masks (bottom).</p>
-    <!-- Add paper figures here once exported from the PDF, e.g.
-         assets/figures/qualitative_fig4_vehicle.png ... qualitative_fig15_goldfish.png -->
-    <div class="expr-list">
-      <figure class="expr-card"><span class="pill">Fig. 4</span><blockquote>“Considering our plans for a self-driving trip with the family this weekend, which vehicle would be the most appropriate?”</blockquote></figure>
-      <figure class="expr-card"><span class="pill">Fig. 7</span><blockquote>“Longevity is a trait associated with certain marine species. Which creature here exemplifies that quality?”</blockquote></figure>
-      <figure class="expr-card"><span class="pill">Fig. 8</span><blockquote>“Which item would assist in transporting bulky objects?”</blockquote></figure>
-      <figure class="expr-card"><span class="pill">Fig. 9</span><blockquote>“For the task of moving furniture, which vehicle would provide the most convenience?”</blockquote></figure>
-      <figure class="expr-card"><span class="pill">Fig. 10</span><blockquote>“My cats have distinct personalities. Could you identify the calmer one for me?”</blockquote></figure>
-      <figure class="expr-card"><span class="pill">Fig. 11</span><blockquote>“Observing the group dynamics, who appears to be the lead singer taking the spotlight?”</blockquote></figure>
-      <figure class="expr-card"><span class="pill">Fig. 12</span><blockquote>“The referee standing among the men in this view.”</blockquote></figure>
-      <figure class="expr-card"><span class="pill">Fig. 13</span><blockquote>“a red bmx bike.”</blockquote></figure>
-      <figure class="expr-card"><span class="pill">Fig. 14</span><blockquote>“a white dog with grey patches.”</blockquote></figure>
-      <figure class="expr-card"><span class="pill">Fig. 15</span><blockquote>“the biggest goldfish.”</blockquote></figure>
-    </div>
-
-    <h3 class="sub">Limitations &amp; failure analysis</h3>
-    <div class="two-col tight">
-      <div class="table-wrap">
-        <table class="results compact">
-          <caption>Failure cases on ReasonVOS (Qwen2.5-VL-7B), 𝒥&amp;𝓕 &lt; 0.5, 149 of 458 samples.</caption>
-          <thead><tr><th class="l">First failing stage</th><th>% of failures</th></tr></thead>
-          <tbody>
-            <tr><td class="l">Object extraction (LVLM)</td><td>33.6</td></tr>
-            <tr><td class="l">Localization (adapter)</td><td>59.7</td></tr>
-            <tr><td class="l">Tracklet selection</td><td>6.7</td></tr>
-            <tr><td class="l">SAM2 propagation</td><td>0.0</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">ATLAS adapts attention rather than correcting LVLM reasoning, so severe reasoning failures can still limit localization. It also assumes access to intermediate visual attentions and samples keyframes uniformly. Localization is the main bottleneck. SAM2 is never the first stage to fail, so propagation errors usually start from an incorrect or ambiguous seed.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ================= RESOURCES ================= -->
 <section id="resources" class="section">
   <div class="wrap">

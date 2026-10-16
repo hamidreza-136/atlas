@@ -198,11 +198,6 @@ table.compact { font-size: 13px; }
 .spark .pts circle.best { fill: var(--accent); }
 .spark .lab text { font: 11px var(--sans); fill: var(--muted); text-anchor: middle; }
 
-/* paper example list */
-.expr-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
-.expr-card { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
-.expr-card blockquote { margin: 8px 0 0; font: italic 15px/1.5 var(--serif); color: var(--ink); }
-
 /* resources */
 .res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .res { display: block; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; transition: border-color .15s, transform .15s, box-shadow .15s; }
