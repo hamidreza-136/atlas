@@ -38,8 +38,6 @@ Search the repo for these strings:
 | Placeholder | Where |
 |---|---|
 | `PAPER_URL`, `ARXIV_URL`, `CODE_URL`, `CHECKPOINT_URL`, `SUPPLEMENTARY_URL` | hero buttons, resources section, footer |
-| `AUTHOR_1..3`, `AFFILIATION_1..2` | hero (the submitted PDF is anonymous) |
-| `AUTHOR_LIST`, `VENUE_PLACEHOLDER`, `YEAR_PLACEHOLDER` | BibTeX block |
 | `SITE_URL` comment | `og:image` / `twitter:image` need an absolute URL for social previews |
 
 ## Optional: use the paper's original figures
