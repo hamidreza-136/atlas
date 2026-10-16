@@ -37,7 +37,7 @@ Search the repo for these strings:
 
 | Placeholder | Where |
 |---|---|
-| `PAPER_URL`, `ARXIV_URL`, `CODE_URL`, `CHECKPOINT_URL`, `SUPPLEMENTARY_URL` | hero buttons, resources section, footer |
+| `PAPER_URL`, `ARXIV_URL`, `SUPPLEMENTARY_URL` (Code / Checkpoints point to `coming-soon.html` until release) | hero buttons, resources section, footer |
 | `SITE_URL` comment | `og:image` / `twitter:image` need an absolute URL for social previews |
 
 ## Notes
