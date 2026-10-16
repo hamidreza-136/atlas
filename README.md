@@ -45,7 +45,6 @@ Search the repo for these strings:
 `assets/figures/atlas_architecture.svg` is a redrawn diagram. To use the original Figure 2,
 export it from the PDF (e.g. `pdftoppm -r 300 -f 3 -l 3 -png paper.pdf fig`, then crop) to
 `assets/figures/atlas_architecture.png` and change the `src` in the *ATLAS Overview* section.
-Paper Figures 4 and 7–15 can be added to the *More Qualitative Results* section the same way.
 
 The GIFs are 9–28 MB each. GitHub accepts files up to 100 MB, but converting them to MP4
 (`<video autoplay loop muted playsinline>`) would make the page load much faster.
